@@ -1,0 +1,31 @@
+.troll {
+  min-height: 100vh;
+  position: relative;
+  .troll-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+  button {
+    width: 385px;
+    height: 72px;
+    color: #fff;
+    border: 2px solid #fff;
+    font-family: $primary-font;
+    font-size: 32px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 200px;
+    border-radius: 11px;
+    background-color: rgba(255, 255, 255, 0.2);
+    @media (max-width: 576px) {
+      width: calc(100% - 40px);
+      left: 0;
+      margin-left: 20px;
+    }
+  }
+}

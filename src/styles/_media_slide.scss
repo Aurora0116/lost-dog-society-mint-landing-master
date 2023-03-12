@@ -1,0 +1,110 @@
+.media-panel {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  .slides {
+    position: absolute;
+    width: 1347px;
+    margin: 0px auto;
+    overflow: hidden;
+    border-radius: 50px;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .slides .slide {
+    width: 1347px;
+    height: 720px;
+    // float: left;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (max-width: 1440px) {
+      width: calc(100% - 420px);
+      height: 600px;
+    }
+    @media (max-width: 992px) {
+      height: 420px;
+    }
+  }
+  .left,
+  .right {
+    border-radius: 50px;
+    width: 1201px;
+    height: 695px;
+    filter: blur(8px);
+    opacity: 0.6;
+    margin: 0 740px;
+  }
+  .button-panel {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 240px);
+    button {
+      width: 80px;
+      height: 80px;
+      font-size: 40px;
+      font-weight: bold;
+      border: solid 2px white;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      &:first-child {
+        @media (max-width: 1600px) {
+        }
+      }
+      &:last-child {
+        @media (max-width: 1600px) {
+        }
+      }
+    }
+    @media (max-width: 1440px) {
+      width: calc(100% - 70px);
+    }
+  }
+}
+.span-panel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 73px;
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin: 0 14.5px;
+  }
+
+  .active,
+  .dot:hover {
+    background-color: white;
+    border: 1px solid red;
+    box-shadow: 0 0 12px 3px red;
+  }
+  @media (max-width: 992px) {
+    margin-top: -30px;
+  }
+}
